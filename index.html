@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camelos - Connect with Friends</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root { --bg:#0f0f0f; --card:#1a1a1a; --text:#e0e0e0; --accent:#1877f2; }
+    [data-theme="light"] { --bg:#f0f2f5; --card:#fff; --text:#050505; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+    .topbar { position:fixed; top:0; left:0; right:0; height:56px; background:var(--card); display:flex; align-items:center; padding:0 16px; z-index:1000; border-bottom:1px solid #333; }
+    .logo { font-size:28px; font-weight:bold; color:var(--accent); }
+    .search { flex:1; max-width:360px; margin:0 16px; background:#333; border-radius:999px; padding:8px 16px; }
+    .container { display:flex; margin-top:56px; max-width:1300px; margin:auto; gap:16px; padding:16px; }
+    .sidebar, .rightbar { width:240px; position:sticky; top:70px; height:calc(100vh - 70px); overflow-y:auto; }
+    .feed { flex:1; max-width:580px; }
+    .card { background:var(--card); border-radius:12px; padding:16px; margin-bottom:16px; box-shadow:0 1px 3px rgba(0,0,0,0.3); }
+    .reaction-bar { display:flex; justify-content:space-around; border-top:1px solid #333; padding:8px 0; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">🐪 Camelos</div>
+    <div class="search"><i class="fas fa-search"></i> Search Camelos</div>
+    <div style="display:flex; gap:24px; font-size:24px;">
+      <i class="fas fa-home"></i>
+      <i class="fas fa-video"></i>
+      <i class="fas fa-store"></i>
+      <i class="fas fa-users"></i>
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-comment-dots"></i>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <div><strong>🐪 Edward Santoz</strong></div>
+      <div><i class="fas fa-users"></i> Friends</div>
+      <div><i class="fas fa-clock"></i> Memories</div>
+      <div><i class="fas fa-flag"></i> Groups</div>
+      <div><i class="fas fa-store"></i> Marketplace</div>
+      <div><i class="fas fa-video"></i> Watch</div>
+    </div>
+
+    <div class="feed">
+      <div class="card">
+        <div style="display:flex; gap:12px;">
+          <i class="fas fa-user-circle" style="font-size:48px;"></i>
+          <input type="text" placeholder="What's on your mind, Edward?" style="flex:1;background:#333;border:none;border-radius:50px;padding:12px;">
+        </div>
+        <div class="reaction-bar">
+          <button onclick="alert('Photo/Video uploaded!')">📷 Photo/Video</button>
+          <button>😊 Feeling/Activity</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <strong>Naivasha Community</strong> <small>· 2h</small>
+        <p>Beautiful sunset at Lake Naivasha today! 🌅 Who else is here?</p>
+        <div class="reaction-bar">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>↗️ Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="rightbar">
+      <div class="card">
+        <h3>Contacts</h3>
+        <div>✅ Friend A (Active)</div>
+        <div>Friend B</div>
+      </div>
+      <div class="card">
+        <h3>Sponsored</h3>
+        <p>Grok by xAI - The most powerful AI</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    console.log('Camelos loaded successfully!');
+  </script>
+</body>
+</html>
